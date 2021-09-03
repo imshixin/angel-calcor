@@ -1,17 +1,18 @@
+/*
+ * @Author: your name
+ * @Date: 2021-08-30 16:15:34
+ * @LastEditTime: 2021-09-02 15:25:22
+ * @LastEditors: imsixn
+ * @Description: In User Settings Edit
+ * @FilePath: \angel-color\src\index.js
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './assets/iconfont/iconfont.css'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

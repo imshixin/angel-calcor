@@ -1,0 +1,35 @@
+@import '~@/assets/scss/base';
+
+.angShower{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 0 6px;
+  border-radius: 4px;
+  height: $ang-height;
+  line-height: $ang-height;
+  font-size: 13px;
+  // background-color: #f06292;
+  &.error{
+    color: rgb(255, 44, 44);
+    animation: showError .3s linear 0s 2;
+  }
+}
+@keyframes showError {
+  0%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-5px);
+  }
+  50%{
+    transform: translateX(0);
+  }
+  75%{
+    transform: translateX(5px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
