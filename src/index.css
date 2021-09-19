@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-08-30 16:15:34
- * @LastEditTime: 2021-09-02 23:18:28
+ * @LastEditTime: 2021-09-15 17:47:18
  * @LastEditors: imsixn
  * @Description: In User Settings Edit
  * @FilePath: \angel-color\src\index.css
@@ -10,12 +10,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 body,html,#root{
   width: 100%;
   height: 100%;
+  background-color: #57606f;
+}
+p{
+  margin: 0 0 8px;
+  font-size: 14px;
+  /* padding-left: 5px; */
+  /* border-left: 3px solid #00000044; */
 }

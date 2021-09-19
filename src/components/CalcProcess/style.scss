@@ -1,0 +1,24 @@
+@import '~@/assets/scss/base';
+
+.procCon{
+  height: 200px;
+  position: relative;
+  overflow-y: auto;
+}
+.calcList{
+  font-size: 15px;
+  list-style: none;
+  margin: 2px 0;
+  padding: 4px 0px;
+  border-radius: $bd-radius;
+
+  .calcItem{
+    // width: 100%;
+    border-radius: $bd-radius;
+    word-break: break-all;
+    background-color: #ffffff77;
+    margin: 2px 0;
+    padding: 2px;
+    font-family: monospace;
+  }
+}

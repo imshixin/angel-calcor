@@ -1,0 +1,11 @@
+@import '~@/assets/scss/base';
+
+.tagCon{
+  display: inline-block;
+  padding: 0px 6px;
+  margin: 0 3px;
+  border-radius: $bd-radius;
+  font-size: 15px;
+  background-color: rgba($color: #e099c2, $alpha: 0.5);
+  font-family: monospace;
+}

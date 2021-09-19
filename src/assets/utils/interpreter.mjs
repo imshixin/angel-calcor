@@ -7,7 +7,8 @@ export {
   numAdd,
   numMinus,
   numDivide,
-  numMultiply
+  numMultiply,
+  check
 }
 
 /* -------------------base function----------------------- */
@@ -80,7 +81,7 @@ function convertToAngel(num) {
 }
 
 function printAngel(angNum) {
-  let ang = getAngel(check(numAdd));
+  let ang = getAngel(check(angNum));
   return `${Object.is(ang.ang, -0) ? '-' : ''}${ang.ang}° ${ang.min < 10 ? '0' + ang.min : ang.min}′ ${ang.sec < 10 ? '0' + ang.sec : ang.sec}″`;
 }
 

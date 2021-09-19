@@ -1,7 +1,7 @@
 /*
  * @Author: imsixn
  * @Date: 2021-08-30 16:26:23
- * @LastEditTime: 2021-09-02 22:59:31
+ * @LastEditTime: 2021-09-13 22:25:27
  * @LastEditors: imsixn
  * @Description: In User Settings Edit
  * @FilePath: \angel-color\src\components\SimpleCalcor\index.js
@@ -10,7 +10,7 @@ import React, { Component } from 'react'
 import './style.scss'
 import AngelShower from '../AngelShower'
 import { numAdd, numMinus, numMultiply, numDivide } from '@/assets/utils/interpreter.mjs'
-import { printAngel } from '../../assets/utils/interpreter.mjs'
+import { check } from '../../assets/utils/interpreter.mjs'
 const methodEnum = {
   add: 'add',
   minus: 'minus',
@@ -79,7 +79,7 @@ export default class SimpleCalcor extends Component {
         default:
           break;
       }
-      printAngel(e.target.value);
+      check(e.target.value);
     } catch (ex) {
       if(ex.name!=='TypeError'){
         this.setState({[operator+'Error']:true})
@@ -95,7 +95,7 @@ export default class SimpleCalcor extends Component {
   render() {
     return (
       <div className='simpleCalcCon'>
-        <div style={{margin:"10px 0",padding:"2px"}} >简易角度计算器</div>
+        <p>简易角度计算器</p>
         <div className='angInputCon'>
           <input placeholder='0.0000' type="text" onChange={this.inputChange} ref={(node) => this.input1 = node} className='angInput' />
           <AngelShower angel={this.state.value1} error={this.state.value1Error} />
