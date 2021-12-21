@@ -19,8 +19,7 @@ export {
  * @return {Number}
  */
 function getSec(angel) {
-  var sec = angel - Math.floor(angel * 100) / 100;
-  return (sec * 10000).toFixed(0) - 0;
+  return Number(angel.split('.',2)[1].substr(2,2));
 }
 
 /**
@@ -29,8 +28,7 @@ function getSec(angel) {
  * @return {Number}
  */
 function getMinute(angel) {
-  var minute = Math.floor(angel * 100) / 100 - Math.floor(angel);
-  return (minute * 100).toFixed(0) - 0;
+  return Number(angel.split('.',2)[1].substr(0,2));
 }
 /**
  * @description: 将角度数转换为对象
@@ -38,10 +36,11 @@ function getMinute(angel) {
  * @return {Object}
  */
 function getAngel(angel) {
+  angel = Number(angel).toFixed(4);
   return {
-    ang: angel < 0 ? -Math.floor(-angel) : Math.floor(angel),
-    min: angel < 0 ? getMinute(-angel) : getMinute(angel),
-    sec: angel < 0 ? getSec(-angel) : getSec(angel),
+    ang: angel < 0 ? -Math.floor(-angel) : Math.floor(angel),//角
+    min: angel < 0 ? getMinute(-angel) : getMinute(angel),//分
+    sec: angel < 0 ? getSec(-angel) : getSec(angel),//秒
   }
 }
 /**
