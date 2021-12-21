@@ -1,4 +1,4 @@
-
+import {log} from './Logger.mjs';
 export {
   interpret,
   getAngel,
@@ -10,6 +10,7 @@ export {
   numMultiply,
   check
 }
+
 
 /* -------------------base function----------------------- */
 
@@ -230,19 +231,19 @@ function calculate(input) {
     }
     switch (flag) {
       case 1:
-        console.log(`add:${result}+${item}=${numAdd(result, item)}`);
+        log(`add:${result}+${item}=${numAdd(result, item)}`);
         result = add(result, item);
         break;
       case 2:
-        console.log(`minus:${result}-${item}=${numMinus(result, item)}`);
+        log(`minus:${result}-${item}=${numMinus(result, item)}`);
         result = minus(result, item);
         break;
       case 3:
-        console.log(`multiply:${result}*${item}=${numMultiply(result, item)}`);
+        log(`multiply:${result}*${item}=${numMultiply(result, item)}`);
         result = numMultiply(result, item);
         break;
       case 4:
-        console.log(`divide:${result}/${item}=${numDivide(result, item)}`);
+        log(`divide:${result}/${item}=${numDivide(result, item)}`);
         result = numDivide(result, item);
         break;
       default:
@@ -261,7 +262,7 @@ function calculate(input) {
  * @return {Number} 角度数字值
  */
 function check(angNum) {
-  console.log('angel checking', angNum, getAngel(angNum));
+  log('angel checking', angNum, getAngel(angNum));
   let ang = getAngel(angNum);
   if (Number.isNaN(ang.ang) || Number.isNaN(ang.min) || Number.isNaN(ang.sec) || ang.min >= 60 || ang.sec >= 60) {
     throw new Error(angNum + '不是合法的角度值');
