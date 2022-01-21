@@ -11,7 +11,7 @@
   margin: 2px 0;
   padding: 4px 0px;
   border-radius: $bd-radius;
-
+  transition: opacity .3s linear;
   .calcItem{
     // width: 100%;
     border-radius: $bd-radius;

@@ -9,18 +9,31 @@
   border-radius: $bd-radius;
   margin: 8px 0;
   position: relative;
+  &>p>.help{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color .1s linear;
+    &:hover{
+      background-color: #fff;
+    }
+  }
   .inputTa {
+    resize: none;
+    outline: none;
+    border: none;
     box-sizing: border-box;
     width: 100%;
     height: 80px;
-    resize: none;
-    font-size: 1.4em;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
     box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.4);
     border-radius: $bd-radius;
-    font-size: 1.2em;
+    font-family: sans-serif;
+    font-size: 1.4em;
     &::placeholder {
       color: #ccc;
     }
@@ -70,5 +83,43 @@
     bottom: $container-pad;
     right: $container-pad;
     overflow: auto;
+    &::-webkit-scrollbar{
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track{
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: #bdc2d4;
+      border-radius: 10px;
+      transition:background-color 1.3s linear;
+      &:hover{
+        background-color: #b0bbc7;
+      }
+    }
+    .processTitle{
+      background: $bg-light-color;
+      position: sticky;
+      top: 0;
+      left: 0;
+      padding: 4px 0;
+      .showPanel{
+        box-shadow: $box-sha;
+        position: absolute;
+        top: 3px;
+        right: 0;
+        border: 1px solid black;
+        border-radius: 10px;
+        label{
+          padding: 0 5px 1px 3px;
+          user-select: none;
+          font-size: 12px;
+          cursor: pointer;
+        }
+        #showAngel{
+          display: none;
+        }
+      }
+    }
   }
 }

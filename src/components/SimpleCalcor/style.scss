@@ -6,6 +6,20 @@
   padding: $container-pad;
   background-color: $bg-light-color;
   border-radius: $bd-radius;
+  &>p>.help{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color .1s linear;
+    &:hover{
+      background-color: #fff;
+    }
+  }
 }
 
 .angInputCon {

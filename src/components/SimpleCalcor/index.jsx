@@ -1,7 +1,7 @@
 /*
  * @Author: imsixn
  * @Date: 2021-08-30 16:26:23
- * @LastEditTime: 2021-09-13 22:25:27
+ * @LastEditTime: 2022-01-20 22:37:55
  * @LastEditors: imsixn
  * @Description: In User Settings Edit
  * @FilePath: \angel-color\src\components\SimpleCalcor\index.js
@@ -95,10 +95,10 @@ export default class SimpleCalcor extends Component {
   render() {
     return (
       <div className='simpleCalcCon'>
-        <p>简易角度计算器</p>
+        <p>简易角度计算器<a target={'_blank'} rel='noreferrer' href='https://blog.xinit.xyz/articles/2021/09/04/1630740655093.html#toc_h2_2' className='help'> ? </a></p>
         <div className='angInputCon'>
           <input placeholder='0.0000' type="text" onChange={this.inputChange} ref={(node) => this.input1 = node} className='angInput' />
-          <AngelShower angel={this.state.value1} error={this.state.value1Error} />
+          <AngelShower angel={this.state.value1} input={true} error={this.state.value1Error} />
         </div>
         <div className="radioBox">
           <RadioInput type='add' clickcall={this.radioChange} fontColor='red' fontClass='icon-jia' defaultChecked />
@@ -108,11 +108,11 @@ export default class SimpleCalcor extends Component {
         </div>
         <div className='angInputCon' >
           <input placeholder='0.0000' type="text" onChange={this.inputChange} ref={(node) => this.input2 = node} className='angInput' />
-          <AngelShower angel={this.state.value2} error={this.state.value2Error} />
+          <AngelShower angel={this.state.value2} input={true} isInt={this.state.calcType===methodEnum.divide||this.state.calcType===methodEnum.multiply} error={this.state.value2Error} />
         </div>
         <div className="resultPanel angInputCon">
         =
-          <AngelShower angel={this.state.result} />
+          <AngelShower angel={this.state.result} input={true} />
         </div>
       </div>
     )
