@@ -23,6 +23,7 @@
     animation: showError .3s linear 0s 2;
   }
   &>.help{
+    user-select: none;
     text-decoration: none;
     display: inline-block;
     position: relative;
